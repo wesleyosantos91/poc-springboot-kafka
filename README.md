@@ -59,7 +59,7 @@ A execução das aplicações são feitas através do de um comando Maven que en
   ### Executar a aplicação producer
   -  ```cd poc-spring-kafka-producer/ ```
   -  ```./mvnw clean compile spring-boot:run```
-  ### Executar a aplicação producer
+  ### Executar a aplicação consumer
   -  ```cd poc-spring-kafka-consumer/ ```
   -  ```./mvnw clean compile spring-boot:run```
 
