@@ -16,6 +16,13 @@ Trata-se de uma aplicação de prova de conceito para desenvolver um consumer co
 
 </div> 
 
+<div align="center">
+
+## Arquitetura
+![Arquitetura](images/poc.png "Arquitetura")
+
+</div>
+
 ## Fundamentos teóricos
 
 Springboot: O Spring Boot é um projeto da Spring que veio para facilitar o processo de configuração e publicação de nossas aplicações. A intenção é ter o seu projeto rodando o mais rápido possível e sem complicação.
