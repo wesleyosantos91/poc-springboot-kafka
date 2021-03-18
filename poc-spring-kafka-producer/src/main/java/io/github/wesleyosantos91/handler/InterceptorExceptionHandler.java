@@ -1,7 +1,6 @@
 package io.github.wesleyosantos91.handler;
 
 
-import io.github.wesleyosantos91.exception.BandRequestException;
 import io.github.wesleyosantos91.exception.ExceptionDetails;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

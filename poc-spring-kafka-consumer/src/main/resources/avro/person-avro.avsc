@@ -1,18 +1,20 @@
-{"namespace": "io.github.wesleyosantos91.domain.person",
- "type": "record",
- "name": "Person",
- "fields": [
-     {
-        "name": "name",
-        "type": "string"
-     },
-     {
-        "name": "age",
-        "type": "int"
-     },
-     {
-        "name": "cpf",
-        "type": "string"
-     }
- ]
+{
+  "namespace": "io.github.wesleyosantos91.domain.person",
+  "type": "record",
+  "name": "Person",
+  "version":"1.0.0",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "age",
+      "type": "int"
+    },
+    {
+      "name": "cpf",
+      "type": "string"
+    }
+  ]
 }

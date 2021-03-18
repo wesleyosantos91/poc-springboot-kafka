@@ -19,7 +19,8 @@
 
     <properties>
         <java.version>11</java.version>
-        <avro.version>1.8.2</avro.version>
+        <kafka-avro-serializer.version>5.4.1</kafka-avro-serializer.version>
+        <avro.version>1.9.0</avro.version>
     </properties>
 
     <developers>
@@ -53,6 +54,12 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-configuration-processor</artifactId>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -98,6 +105,11 @@
                     <artifactId>slf4j-log4j12</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.10</version>
         </dependency>
     </dependencies>
 
