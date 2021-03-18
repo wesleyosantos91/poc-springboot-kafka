@@ -55,7 +55,11 @@ public class Consumer {
             log.info("topic: " + consumerRecord.topic());
             log.info("Partion: " + consumerRecord.partition());
             log.info("Person: " + consumerRecord.value());
-            throw new ConnectException();
+            //TODO force exception recovered
+            // throw new ConnectException();
+
+            //TODO force exception not recovered
+            // throw new NullPointerException();
         } finally {
             ack.acknowledge();
         }
