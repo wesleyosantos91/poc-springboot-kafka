@@ -1,0 +1,19 @@
+app:
+  kafka:
+    topic: person
+spring:
+  kafka:
+    bootstrap-servers: localhost:29092
+    listener:
+      ack-mode: manual
+    properties:
+      schema.registry.url: http://localhost:8081
+      specific.avro.reader: true
+      allow.auto.create.topics: true
+    consumer:
+      group-id: person-consumer
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+server:
+  port: 9094

@@ -12,8 +12,8 @@
     <artifactId>poc-spring-kafka-consumer</artifactId>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <developers>
@@ -42,7 +42,7 @@
             <plugin>
                 <groupId>org.apache.avro</groupId>
                 <artifactId>avro-maven-plugin</artifactId>
-                <version>${avro.version}</version>
+                <version>1.9.0</version>
                 <executions>
                     <execution>
                         <id>schemas</id>
@@ -55,7 +55,7 @@
                         <configuration>
                             <stringType>String</stringType>
                             <sourceDirectory>${project.basedir}/src/main/resources/avro/</sourceDirectory>
-                            <outputDirectory>${project.basedir}/target/classes/</outputDirectory>
+                            <outputDirectory>${project.basedir}/target/generated-sources/avro/</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>

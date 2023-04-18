@@ -1,5 +1,5 @@
 {
-  "namespace": "io.github.wesleyosantos91.domain.person",
+  "namespace": "io.github.wesleyosantos91.event.person",
   "type": "record",
   "name": "Person",
   "version":"1.0.0",

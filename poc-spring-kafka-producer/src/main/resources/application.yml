@@ -1,0 +1,16 @@
+app:
+  kafka:
+    topic: person
+spring:
+  kafka:
+    bootstrap-servers: localhost:29092
+    properties:
+      schema.registry.url: http://localhost:8081
+      allow.auto.create.topics: true
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      acks: 1
+      compression-type: lz4
+server:
+  port: 9093

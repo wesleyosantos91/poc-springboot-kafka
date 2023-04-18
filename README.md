@@ -36,8 +36,8 @@ Trata-se de uma aplicação de prova de conceito para desenvolver um consumer co
 > Java: Java é uma linguagem de programação orientada a objetos desenvolvida na década de 90 por uma equipe de programadores chefiada por James Gosling, na empresa Sun Microsystems. Em 2008 o Java foi adquirido pela empresa Oracle Corporation..
 
 ## Tecnologias
-- Java 11
-- Spring Boot 2.4.1.RELEASE
+- Java 17
+- Spring Boot 3.0.5
   - spring-boot-starter-web
   - spring-boot-starter-data-jpa
   - spring-boot-devtools
@@ -64,8 +64,8 @@ A execução das aplicações são feitas através do de um comando Maven que en
   -  ```./mvnw clean compile spring-boot:run```
 
 ## Utilização
-- Schema Registry para validar schemas avro cadastrados e versões: http://localhost:8001
-- Efetuar uma requisição REST com verbo POST na seguinte URL: http://localhost:8080/persons/publish
+- Landoop UI em http://localhost:3030
+- Efetuar uma requisição REST com verbo POST na seguinte URL: http://localhost:8083/persons/publish
 - Payload
     ``` 
          {
@@ -73,4 +73,4 @@ A execução das aplicações são feitas através do de um comando Maven que en
             "age": 29,
             "cpf": "00000000000"     
           }
-    
+    ```  
