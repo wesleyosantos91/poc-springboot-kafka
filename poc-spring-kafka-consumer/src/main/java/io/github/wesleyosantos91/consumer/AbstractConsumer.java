@@ -1,7 +1,6 @@
 package io.github.wesleyosantos91.consumer;
 
 import io.github.wesleyosantos91.mapper.AbstractMapper;
-import io.github.wesleyosantos91.mapper.PersonMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -18,7 +17,11 @@ public abstract class AbstractConsumer <Event, Domain, Dto, Mapper extends Abstr
     @KafkaListener(topics = "${app.kafka.topic}")
     public void consumeMessage(@Payload ConsumerRecord<String, Event> record, Acknowledgment acknowledgment) {
 
-        log.info("process record {}", mapper.parseEventoToDomain(record.value()));
+        Domain domain = mapper.parseEventoToDomain(record.value());
+
+        log.info("process record {}", domain);
+
+        processar(domain);
 
         log.info("key: " + record.key());
         log.info("Headers: " + record.headers());
@@ -30,4 +33,6 @@ public abstract class AbstractConsumer <Event, Domain, Dto, Mapper extends Abstr
         // Confirme o processamento da mensagem manualmente usando o Acknowledgment
         acknowledgment.acknowledge();
     }
+
+    abstract void processar(Domain domain);
 }

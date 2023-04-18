@@ -24,7 +24,7 @@ public class PersonResource {
     @PostMapping(value = "/publish")
     public ResponseEntity<?> sendMessageToKafkaTopic(@RequestBody PersonDto person) {
 
-        kafkaPersonProducer.send(mapper.parseDtoToEvent(person));
+        producer.send(mapper.parseDtoToEvent(person));
         return ResponseEntity.accepted().build();
     }
 }
